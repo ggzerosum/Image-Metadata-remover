@@ -20,6 +20,8 @@ static class Program
             this.Size = new Size(600, 300);
             this.MinimumSize = new Size(400, 250);
 
+            this.FormClosing += (s, e) => Application.Exit();
+            
             Label lblInput = new Label() { Text = "Input Folder:", Location = new Point(10, 20), AutoSize = true };
             txtInputFolder = new TextBox()
             {
